@@ -11,29 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name,  class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name ,  class: "form-control"%>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email,  class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :phone_number %><br>
-    <%= f.text_field :phone_number %>
+    <%= f.text_field :phone_number,  class: "form-control" %>
   </div>
-  <div class="field">
+  <div  >
     <%= f.label :state %><br>
     <%= f.check_box :state %>
-  </div>
-  <span>choose your doctor</span>
+  </div><br>
+  <span>choose your doctor</span><br>
    <%= f.collection_select :doctor_id, Doctor.order(:first_name),:id,:first_name  %>
-   <div class="actions">
-    <%= f.submit %>
+   <div class="actions"><br>
+    <%= f.submit 'create patient',class: "btn btn-primary" %>
   </div>
 <% end %>

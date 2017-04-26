@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<div class="bg-success" >
+<p class="bg-success">
   <strong>First name:</strong>
-  <%= @patient.first_name %>
+  <%= @patient.first_name  %>
 </p>
-
-<p>
-  <strong>Last name:</strong>
+<p class="bg-info">
+ <strong>Last name:</strong>
   <%= @patient.last_name %>
 </p>
 
@@ -15,25 +14,21 @@
   <%= @patient.email %>
 </p>
 
-<p>
+<p class="bg-danger">
   <strong>Phone number:</strong>
   <%= @patient.phone_number %>
 </p>
 
-<p>
+<p class="bg-info">
   <strong>State:</strong>
   <%= @patient.state %>
 </p>
-
-<p>
-  <strong>Doctor:</strong>
-  <%= @patient.doctor_id %>
-</p>
-<p>
+<p class="bg-danger">
   <strong>Doctor:</strong>
   <%= @patient.doctor.first_name %>
   <%= @patient.doctor.last_name %>
 </p>
+</div>
 
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<%= link_to 'Edit', edit_patient_path(@patient),  class:"btn btn-default"%> 
+<%= link_to 'Back', patients_path , class:"btn btn-default"%>
