@@ -31,11 +31,9 @@
     <%= f.label :state %><br>
     <%= f.check_box :state %>
   </div>
-  <div class="field">
-    <%= f.label :doctor_id %><br>
-    <%= f.number_field :doctor_id %>
-  </div>
-  <div class="actions">
+  <span>choose your doctor</span>
+   <%= f.collection_select :doctor_id, Doctor.order(:first_name),:id,:first_name  %>
+   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

@@ -29,6 +29,11 @@
   <strong>Doctor:</strong>
   <%= @patient.doctor_id %>
 </p>
+<p>
+  <strong>Doctor:</strong>
+  <%= @patient.doctor.first_name %>
+  <%= @patient.doctor.last_name %>
+</p>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
